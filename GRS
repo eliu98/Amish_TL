@@ -1,0 +1,23 @@
+Rscript PRSice.R --dir . \
+    --prsice ./PRSice_linux \
+    --a1 effect_allele \
+    --a2 other_allele \
+    --base GRS_SNPs_Burren.txt \
+    --binary-target T \
+    --bp base_pair_location \
+    --chr chromosome \
+    --lower 5e-08 \
+    --out GRS_Telseq \
+    --clump-kb 250\
+    --clump-p 1.000000\
+    --clump-r2 0.100000\
+    --interval 5e-05\
+    --model add\
+    --print-snp  \
+    --pvalue p_value \
+    --snp rs_id \
+    --target WGS_Biallelelic \
+    --pheno pheno.txt \
+    --pheno-col cdx_score \
+    --thread max\
+    --bar-levels 0.01,0.05,0.1,0.2,0.5,1 
