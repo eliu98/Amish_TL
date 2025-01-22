@@ -18,6 +18,6 @@ Rscript PRSice.R --dir . \
     --snp rs_id \
     --target WGS_Biallelelic \
     --pheno pheno.txt \
-    --pheno-col cdx_score \
+    --pheno-col pheno \
     --thread max\
     --bar-levels 0.01,0.05,0.1,0.2,0.5,1 
