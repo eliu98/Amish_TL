@@ -1,0 +1,32 @@
+pedigree, file = "/mnt/vstor/SOM_EPBI_JLH213/users/yxl3272/Amish_Telomere/h2ped/SAGE/TL_DOB_ped.txt"
+{
+delimiters = "\t"
+individual_missing_value = 0
+
+pedigree_id = nufamid
+individual_id = correct_AGDBID
+sex_field = sex.x, male = "1", female="2"
+parent_id = fa
+parent_id = mo
+trait = "telseq", continuous, missing = "NA"
+covariate = "sample_age", continuous, missing = "NA"
+covariate = "center", binary, missing = "NA"
+covariate = "sex", binary, missing = "NA"
+}
+
+assoc, out="/mnt/vstor/SOM_EPBI_JLH213/users/yxl3272/Amish_Telomere/h2ped/SAGE/transformed/Site/TL_rank_pe_only.out"
+{
+
+trait = telseq_rank
+cov = sample_age
+cov = center
+cov = sex
+me = false
+se = false
+fe = false
+
+transformation{ 
+option = none 
+}
+
+}
